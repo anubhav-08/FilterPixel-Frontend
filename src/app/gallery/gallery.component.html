@@ -1,0 +1,20 @@
+<div class="gallery">
+    <div class="content">
+        <div class="source-options">
+            <div #s3 class="s3 source-option active" (click)="toogle('s3', s3, google)">S3</div>
+            <div #google class="google source-option" (click)="toogle('google', s3, google)">Google Drive</div>
+        </div>
+        <div class="images">
+            <ng-template [ngIf]="showS3">
+                <div *ngFor="let img_url of s3Images" class="image">
+                    <img src={{img_url}} alt="comp">
+                </div>
+            </ng-template>
+            <ng-template [ngIf]="!showS3">
+                <div *ngFor="let img_url of googleImages" class="image">
+                    <img src={{img_url}} alt="comp">
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

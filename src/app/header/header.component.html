@@ -1,0 +1,11 @@
+<nav class="navbar bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a _ngcontent-skl-c104="" routerLink="gallery" class="navbar-brand" style="
+        color: antiquewhite;
+    ">FilterPixel</a>
+        <button *ngIf="!isLogedIn; else logedUser" routerLink='login' class="btn btn-outline-success">SignUp</button>
+        <ng-template #logedUser>
+            Hi User
+        </ng-template>
+    </div>
+</nav>

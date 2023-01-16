@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="social-login btn">Login with google</div>
+    <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+
+    <div class="sepration">
+        <hr> OR <hr>
+    </div>
+    <div class="login-form">
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input [(ngModel)]="loginUserData.username" placeholder="Please enter your username" name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input [(ngModel)]="loginUserData.password" placeholder="Let me know your secret!" name="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button (click)="loginUser()" class="btn btn-success">Login</button>
+        </form>
+    </div>
+</div>
