@@ -8,7 +8,7 @@ export class ImagesService {
   googleUrl = 'http://127.0.0.1:8000/google/';
   header = new HttpHeaders().set(
     "Authorization",
-     localStorage.getItem("token")? "Token "+localStorage.getItem('token') : "not authorized"
+     localStorage.getItem("access")? "Bearer "+localStorage.getItem('access') : "not authorized"
   );
   showS3 = true;
   constructor(private http:HttpClient) { }

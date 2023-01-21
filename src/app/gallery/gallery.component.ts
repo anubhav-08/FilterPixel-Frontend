@@ -21,7 +21,6 @@ export class GalleryComponent {
       this._router.navigate(['/login']);
     });
     imagesData.getGoogleImage().subscribe((res:any)=>{
-      console.log(res);
       this.googleImages = JSON.parse(res).data;
     },(err)=>{
       console.log(err.message);
